@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE database SYSTEM "db.dtd"[]>
+<database>
+  <projects>
+    <project projectName="WPF">
+      <activity description="lovro radi xml" duration="4" date="24.12.2020" department="developeri"/>
+    </project>
+    <project projectName="C#">
+      <activity description="lovro radi c# i update" duration="3" date="25.12.2020" department="developeri"/>
+    </project>
+  </projects>
+
+  <users>
+    <user username="Lovro" memberSince="25.12.2020" department="transformatori"/>
+    <user username="Lovro2" memberSince="25.12.2020" department="developeri"/>
+  </users>
+
+  <departments>
+    <department departmentName="transformatori"/>
+    <department departmentName="developeri"/>
+  </departments>
+</database>

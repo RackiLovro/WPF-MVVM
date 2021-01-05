@@ -1,0 +1,54 @@
+﻿<Window x:Class="HourLogger.View.UpdateActivity"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="UpdateActivity" Height="450" Width="400"
+        xmlns:local="clr-namespace:HourLogger.Converters"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <Window.Resources>
+        <local:ActivityConverter x:Key="projectConverter"></local:ActivityConverter>
+    </Window.Resources>
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition  Height="25"/>
+            </Grid.RowDefinitions>
+
+            <Label VerticalAlignment="Center" HorizontalAlignment="Right" Content="Activity description:" Grid.Row="0" Grid.Column="0"/>
+            <TextBox VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="26" Width="150" Text="{Binding Path=Description, Mode=OneWay}"  Name="activityDescription" Grid.Row="0" Grid.Column="1"/>
+
+            <Label VerticalAlignment="Center" HorizontalAlignment="Right" Content="Activity duration:" Grid.Row="1" Grid.Column="0"/>
+            <TextBox VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="26" Width="150" Text="{Binding Path=Duration, Mode=OneWay}" Name="activityDuraion" Grid.Row="1" Grid.Column="1"/>
+
+            <Label VerticalAlignment="Center" HorizontalAlignment="Right" Content="Activity date:" Grid.Row="2" Grid.Column="0"/>
+            <DatePicker HorizontalAlignment="Left" Height="26" Width="150" Name="activityDate" SelectedDate="{Binding Path=Date, Mode=OneWay}" Grid.Row="2" Grid.Column="1"/>
+
+            <Label VerticalAlignment="Center" HorizontalAlignment="Right" Content="Activity Department:" Grid.Row="3" Grid.Column="0"/>
+            <TextBox VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="26" Width="150" Text="{Binding Path=Department, Mode=OneWay}" Name="activityDepartment" Grid.Row="3" Grid.Column="1"/>
+
+            <Button Click="Close" Content="Cancel" Grid.Row="4" Grid.Column="1"/>
+
+            <Button Click="Close" Content="Save" Command="{Binding Path=AddCommand}" Grid.Row="4" Grid.Column="0">
+                <Button.CommandParameter>
+                    <MultiBinding Converter="{StaticResource projectConverter}">
+                        <Binding Path="Id"/>
+                        <Binding Path="Text" ElementName="activityDescription"/>
+                        <Binding Path="Text" ElementName="activityDuraion"/>
+                        <Binding Path="Text" ElementName="activityDate"/>
+                        <Binding Path="Text" ElementName="activityDepartment"/>
+                    </MultiBinding>
+                </Button.CommandParameter>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,9 @@
+﻿<Application x:Class="HourLogger.View.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:HourLogger"
+             StartupUri="/view/Main.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

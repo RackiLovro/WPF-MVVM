@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HourLogger", "HourLogger.csproj", "{A400E21E-583F-4111-A1C5-EBE91F0E5262}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A400E21E-583F-4111-A1C5-EBE91F0E5262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A400E21E-583F-4111-A1C5-EBE91F0E5262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A400E21E-583F-4111-A1C5-EBE91F0E5262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A400E21E-583F-4111-A1C5-EBE91F0E5262}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44711AE1-B39C-4046-B7FB-6A0CFA4D029A}
+	EndGlobalSection
+EndGlobal

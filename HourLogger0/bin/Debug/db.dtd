@@ -1,0 +1,16 @@
+<!ELEMENT database (projects, users, departments)>
+
+<!ELEMENT projects (project)*>
+<!ELEMENT users (user)*>
+<!ELEMENT departments (department)*>
+
+<!ELEMENT project (activity)*>
+<!ELEMENT user EMPTY>
+<!ELEMENT department EMPTY>
+
+<!ELEMENT activity EMPTY>
+
+<!ATTLIST project name CDATA #REQUIRED>
+<!ATTLIST user username CDATA #REQUIRED department CDATA #REQUIRED memberSince CDATA #REQUIRED>
+<!ATTLIST department departmentname CDATA #REQUIRED>
+<!ATTLIST activity duration CDATA #REQUIRED description CDATA #REQUIRED date CDATA #REQUIRED department CDATA #REQUIRED>
