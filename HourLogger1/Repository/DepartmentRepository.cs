@@ -11,6 +11,11 @@ namespace HourLogger.Repository
 {
     class DepartmentRepository : IRepository<Department>
     {
+        private readonly Database _database;
+        public DepartmentRepository(Database database)
+        {
+            this._database = database;
+        }
         public void Add(Department model)
         {
             throw new NotImplementedException();
@@ -18,7 +23,19 @@ namespace HourLogger.Repository
 
         public ObservableCollection<Department> All()
         {
-            throw new NotImplementedException();
+            var departments = new ObservableCollection<Department>();
+
+            var elements = _database.Element("database").Element("departments").Elements("department");
+
+            foreach (var element in elements)
+            {
+                var id = Int32.Parse(element.Attribute("id").Value);
+                var name = element.Attribute("name").Value;
+
+                departments.Add(new Department(id, name));
+            }
+
+            return departments;
         }
 
         public void Delete(Department model)
@@ -33,7 +50,11 @@ namespace HourLogger.Repository
 
         public Department Get(int id)
         {
-            throw new NotImplementedException();
+            var activity = _database.Element("database").Descendants("department").Single(x => (Int32)x.Attribute("id") == id);
+
+            var name = activity.Attribute("name").Value;
+
+            return new Department(id, name);
         }
 
         public int Id()

@@ -11,9 +11,9 @@ namespace HourLogger.ViewModel
 {
     class AddActivityViewModel
     {
-        private int _id;
-        private Project _project;
-        private MainViewViewModel _mainViewViewModel;
+        private readonly int _id;
+        private readonly Project _project;
+        private readonly MainViewViewModel _mainViewViewModel;
         public AddActivityViewModel(MainViewViewModel mainViewViewModel, Project project)
         {
             _id = mainViewViewModel.ActivityRepository.Id();
@@ -33,7 +33,9 @@ namespace HourLogger.ViewModel
             {
                 if (_add == null) _add = new RelayCommand(o =>
                 {
-                    _mainViewViewModel.ActivityRepository.Add(_project, o as Activity);
+                    var activity = o as Activity;
+                    activity.Department = this._mainViewViewModel.LogViewModel.Department;
+                    _mainViewViewModel.ActivityRepository.Add(_project, activity);
                     _mainViewViewModel.Projects.Clear();
                     _mainViewViewModel.Projects = _mainViewViewModel.ProjectRepository.All();
                 },

@@ -15,13 +15,13 @@ namespace HourLogger.View
     public partial class App : Application
     {
         static readonly Database _database = Database.Instance;
-
+        /*
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
             MainView window = new MainView();
             MainViewViewModel VM = new MainViewViewModel(_database);
             window.DataContext = VM;
-        }
+        }*/
     }
 }

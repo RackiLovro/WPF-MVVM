@@ -14,6 +14,8 @@ namespace HourLogger.Models
 
         public Department()
         {
+            _id = 0;
+            _name = "";
         }
 
         public Department(int id, string departmentName)

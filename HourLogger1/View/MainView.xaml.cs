@@ -22,7 +22,6 @@ namespace HourLogger.View
     /// </summary>
     public partial class MainView : Window
     {
-        static readonly Database _database = Database.Instance;
         public MainView()
         {
             InitializeComponent();

@@ -8,12 +8,48 @@
         Title="Main" Height="400" Width="400">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition/>
+            <RowDefinition  Height="25"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="0" Grid.Column="0" Click="AddProject">START</Button>
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Right" 
+               Grid.Column="0" Grid.Row="0" Content="Logged in as:"/>
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Left" 
+               Grid.Column="1" Grid.Row="0" Content="{Binding Username}"/>
+
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Right" 
+               Grid.Column="2" Grid.Row="0" Content="Department:"/>
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Left" 
+               Grid.Column="3" Grid.Row="0" Content="{Binding Department}"/>
+
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Right" 
+               Grid.Column="0" Grid.Row="1" Content="Member since:"/>
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Left" 
+               Grid.Column="1" Grid.Row="1" Content="{Binding Date}"/>
+
+        <ComboBox SelectedItem="{Binding User}" ItemsSource="{Binding Users}" DisplayMemberPath="Username" Grid.Column="2" Grid.Row="2"/>
+        <ComboBox Name="departmentList"  ItemsSource="{Binding Departments}" DisplayMemberPath="Name" Grid.Column="2" Grid.Row="4"/>
+
+        <Label Content="User" Grid.Row="2" Grid.Column="1"/>
+        <Label Content="Department" Grid.Row="4" Grid.Column="1"/>
+
+        <Button Content="Manage" 
+                Command="{Binding Path=Manage}"
+                Grid.Column="0" Grid.Row="6"/>
+        <Button Content="Switch" Command="{Binding Path=SwitchDepartment}" 
+                CommandParameter="{Binding ElementName=departmentList, Path=SelectedItem}" 
+                Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="6" />
+        <Button Content="Generate Repot" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="6"/>
     </Grid>
 </Window>

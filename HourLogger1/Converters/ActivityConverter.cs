@@ -19,7 +19,7 @@ namespace HourLogger.Converters
             var description = values[1] as string;
             var duration = values[2] as string;
             var stringDate = values[3] as string;
-            var department = values[4] as string;
+            var department = "dummy";
 
             if (description != "" && duration != "" && stringDate != "" && department != "")
             {

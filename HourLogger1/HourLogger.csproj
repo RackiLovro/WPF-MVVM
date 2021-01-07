@@ -90,6 +90,7 @@
     <Compile Include="Models\Component.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="ViewModel\AddActivityViewModel.cs" />
+    <Compile Include="ViewModel\LogViewModel.cs" />
     <Compile Include="ViewModel\MainViewViewModel.cs" />
     <Compile Include="Models\Activity.cs" />
     <Compile Include="Models\Department.cs" />

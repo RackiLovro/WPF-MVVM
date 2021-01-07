@@ -32,9 +32,6 @@
         <Label VerticalAlignment="Center" HorizontalAlignment="Right" Content="Activity date:" Grid.Row="2" Grid.Column="0"/>
         <DatePicker HorizontalAlignment="Left" Height="26" Width="150" Name="activityDate" SelectedDate="{x:Static sys:DateTime.Now}" Grid.Row="2" Grid.Column="1"/>
 
-        <Label VerticalAlignment="Center" HorizontalAlignment="Right" Content="Activity Department:" Grid.Row="3" Grid.Column="0"/>
-        <TextBox VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="26" Width="150" Name="activityDepartment" Grid.Row="3" Grid.Column="1"/>
-        
         <Button Click="Close" Content="Cancel" Grid.Row="4" Grid.Column="1"/>
 
         <Button Click="Close" Content="Save" Command="{Binding Path=AddCommand}" Grid.Row="4" Grid.Column="0">
@@ -44,7 +41,6 @@
                     <Binding Path="Text" ElementName="activityDescription"/>
                     <Binding Path="Text" ElementName="activityDuraion"/>
                     <Binding Path="Text" ElementName="activityDate"/>
-                    <Binding Path="Text" ElementName="activityDepartment"/>
                 </MultiBinding>
             </Button.CommandParameter>
         </Button>

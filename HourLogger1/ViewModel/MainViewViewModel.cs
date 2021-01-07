@@ -18,14 +18,20 @@ namespace HourLogger.ViewModel
     class MainViewViewModel : INotifyPropertyChanged
     {
         private ObservableCollection<Project> _projects;
+        private readonly LogViewModel _logViewModel;
         private readonly ProjectRepository _projectRepository;
         private readonly ActivityRepository _activityRepository;
 
-        public MainViewViewModel(Database database)
+        public MainViewViewModel(Database database, LogViewModel logViewModel)
         {
             _projectRepository = new ProjectRepository(database);
             _activityRepository = new ActivityRepository(database);
             _projects = _projectRepository.All();
+            _logViewModel = logViewModel;
+        }
+        public LogViewModel LogViewModel
+        {
+            get { return _logViewModel; }
         }
         public ActivityRepository ActivityRepository
         {
@@ -56,8 +62,10 @@ namespace HourLogger.ViewModel
             {
                 if (_addActivity == null) _addActivity = new RelayCommand(o =>
                 {
-                    var addActivity = new AddActivity();
-                    addActivity.DataContext = new AddActivityViewModel(this, o as Project);
+                    var addActivity = new AddActivity
+                    {
+                        DataContext = new AddActivityViewModel(this, o as Project)
+                    };
                     addActivity.Show();
                 },
                     o => true
@@ -78,8 +86,10 @@ namespace HourLogger.ViewModel
             {
                 if (_addProject == null) _addProject = new RelayCommand(o =>
                 {
-                    var addProject = new AddProject();
-                    addProject.DataContext = this;
+                    var addProject = new AddProject
+                    {
+                        DataContext = this
+                    };
                     addProject.Show();
                 },
                     o => true
@@ -99,8 +109,10 @@ namespace HourLogger.ViewModel
             {
                 if (_updateProject == null) _updateProject = new RelayCommand(o =>
                 {
-                    var updateProject = new UpdateProject();
-                    updateProject.DataContext = new UpdateProjectViewModel(o as Project, this);
+                    var updateProject = new UpdateProject
+                    {
+                        DataContext = new UpdateProjectViewModel(o as Project, this)
+                    };
                     updateProject.Show();
                 },
                     o => true
@@ -119,8 +131,10 @@ namespace HourLogger.ViewModel
             {
                 if (_updateActivity == null) _updateActivity = new RelayCommand(o =>
                 {
-                    var updateActiivty = new UpdateActivity();
-                    updateActiivty.DataContext = new UpdateActivityViewModel(this, o as Activity);
+                    var updateActiivty = new UpdateActivity
+                    {
+                        DataContext = new UpdateActivityViewModel(this, o as Activity)
+                    };
                     updateActiivty.Show();
                 },
                     o => true

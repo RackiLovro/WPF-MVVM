@@ -11,14 +11,18 @@ namespace HourLogger.Models
     {
         private int _id;
         private string _username;
-        private string _memberSince;
+        private DateTime _memberSince;
         private Department _department;
 
         public User()
         {
+            _id = 0;
+            _username = "";
+            _memberSince = DateTime.Now;
+            _department = new Department();
         }
 
-        public User(int id, string username, string memberSince, Department department)
+        public User(int id, string username, DateTime memberSince, Department department)
         {
             _id = id;
             _username = username;
@@ -44,7 +48,15 @@ namespace HourLogger.Models
                 OnPropertyChanged("Username");
             }
         }
-        public string MemberSince
+        public string StringMemberSince
+        {
+            get { return _memberSince.Date.ToString("dd.MM.yyyy"); }
+            set
+            {
+                OnPropertyChanged("MemberSince");
+            }
+        }
+        public DateTime MemberSince
         {
             get { return _memberSince; }
             set

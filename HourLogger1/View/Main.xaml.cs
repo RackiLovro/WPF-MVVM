@@ -24,14 +24,9 @@ namespace HourLogger.View
         public Main()
         {
             InitializeComponent();
+            LogViewModel LVM = new LogViewModel(_database);
+            this.DataContext = LVM;
         }
 
-        private void AddProject(object sender, RoutedEventArgs e)
-        {
-            MainView window = new MainView();
-            MainViewViewModel VM = new MainViewViewModel(_database);
-            window.DataContext = VM;
-            window.Show();
-        }
     }
 }
