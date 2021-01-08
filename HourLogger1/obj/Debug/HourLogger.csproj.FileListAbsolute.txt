@@ -237,7 +237,6 @@ C:\Users\racki\Documents\WPF-MVVM\HourLogger1\bin\Debug\GalaSoft.MvvmLight.Platf
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\bin\Debug\GalaSoft.MvvmLight.Platform.xml
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\View\AddActivity.g.cs
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\View\AddProject.g.cs
-C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\View\Main.g.cs
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\View\MainView.g.cs
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\View\UpdateActivity.g.cs
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\View\UpdateProject.g.cs
@@ -247,7 +246,6 @@ C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\HourLogger_MarkupCompile
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\HourLogger_MarkupCompile.lref
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\View\AddActivity.baml
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\View\AddProject.baml
-C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\View\Main.baml
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\View\MainView.baml
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\View\UpdateActivity.baml
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\View\UpdateProject.baml
@@ -258,3 +256,5 @@ C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\HourLogger.csproj.CoreCo
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\HourLogger.csproj.CopyComplete
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\HourLogger.exe
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\HourLogger.pdb
+C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\View\LogView.g.cs
+C:\Users\racki\Documents\WPF-MVVM\HourLogger1\obj\Debug\View\LogView.baml

@@ -18,10 +18,10 @@ namespace HourLogger.View
     /// <summary>
     /// Interaction logic for Main.xaml
     /// </summary>
-    public partial class Main : Window
+    public partial class LogView : Window
     {
         static readonly Database _database = Database.Instance;
-        public Main()
+        public LogView()
         {
             InitializeComponent();
             LogViewModel LVM = new LogViewModel(_database);

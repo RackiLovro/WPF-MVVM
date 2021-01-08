@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\racki\Documents\WPF-MVVM\HourLogger1\View\App.xaml
-61648125846
+6-1768807161
 
-30-1771264137
+31-111060057
 125910733359
-View\AddActivity.xaml;View\AddProject.xaml;View\Main.xaml;View\MainView.xaml;View\UpdateActivity.xaml;View\UpdateProject.xaml;
+View\AddActivity.xaml;View\AddProject.xaml;View\LogView.xaml;View\MainView.xaml;View\UpdateActivity.xaml;View\UpdateProject.xaml;
 
-True
+False
 

@@ -88,6 +88,7 @@
     <Compile Include="Converters\ProjectConverter.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Models\Component.cs" />
+    <Compile Include="Reporter.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="ViewModel\AddActivityViewModel.cs" />
     <Compile Include="ViewModel\LogViewModel.cs" />
@@ -108,8 +109,8 @@
     <Compile Include="View\AddProject.xaml.cs">
       <DependentUpon>AddProject.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Main.xaml.cs">
-      <DependentUpon>Main.xaml</DependentUpon>
+    <Compile Include="View\LogView.xaml.cs">
+      <DependentUpon>LogView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
@@ -132,7 +133,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Main.xaml">
+    <Page Include="View\LogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -16,6 +16,7 @@ namespace HourLogger.ViewModel
     class LogViewModel : INotifyPropertyChanged
     {
         private  User _user;
+        private readonly Database _database;
         private readonly UserRepository _userRepository;
         private readonly DepartmentRepository _departmentRepository;
         private readonly ObservableCollection<User> _users;
@@ -31,6 +32,8 @@ namespace HourLogger.ViewModel
 
         public LogViewModel(Database database)
         {
+            _database = database;
+
             _userRepository = new UserRepository(database);
             _departmentRepository = new DepartmentRepository(database);
 
@@ -145,6 +148,25 @@ namespace HourLogger.ViewModel
             set
             {
                 _manage = value;
+            }
+        }
+
+        private ICommand _generate;
+        public ICommand Generate
+        {
+            get
+            {
+                if (_generate == null) _generate = new RelayCommand(o =>
+                {
+                    Reporter.GenerateReport(_database);
+                },
+                    o => true
+                    );
+                return _generate;
+            }
+            set
+            {
+                _generate = value;
             }
         }
     }

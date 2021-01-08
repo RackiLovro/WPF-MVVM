@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\racki\Documents\HourLogger0\obj\Debug\
+C:\Users\racki\Documents\WPF-MVVM\HourLogger0\obj\Debug\
 HourLogger
 none
 false
 DEBUG;TRACE
-C:\Users\racki\Documents\HourLogger0\View\App.xaml
+C:\Users\racki\Documents\WPF-MVVM\HourLogger0\View\App.xaml
 7899880434
 
-21622784776
-125-1522778901
+22-219574591
+1251658435873
 View\CreateActivity.xaml;View\CreateProject.xaml;View\LoginWindow.xaml;View\MainWindow.xaml;View\SwitchDivision.xaml;View\UpdateActivity.xaml;View\UpdateProject.xaml;
 
-False
+True
 
